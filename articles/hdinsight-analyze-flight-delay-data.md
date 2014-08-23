@@ -111,7 +111,7 @@ For more information, see [HDInsight: Hive Internal and External Tables Intro][c
 
 		$subscriptionName = "<AzureSubscriptionName>"
 		$storageAccountName = "<AzureStorageAccountName>"
-		$dataContainerName = "<BlobStorageContainerName>"
+		$containerName = "<BlobStorageContainerName>"
 		
 		$localFolder = "C:\Tutorials\FlightDelays\Data"
 		$destFolder = "tutorials/flightdelays/data"
@@ -143,11 +143,11 @@ For more information, see [HDInsight: Hive Internal and External Tables Intro][c
 		
 		    Write-Host "Copying $fileName to $blobName" -BackgroundColor Green
 		
-		    Set-AzureStorageBlobContent -File $fileName -Container $dataContainerName -Blob $blobName -Context $destContext
+		    Set-AzureStorageBlobContent -File $fileName -Container $containerName -Blob $blobName -Context $destContext
 		}
 		
 		# List the uploaded files on HDinsight
-		Get-AzureStorageBlob -Container $dataContainerName  -Context $destContext -Prefix $destFolder
+		Get-AzureStorageBlob -Container $containerName  -Context $destContext -Prefix $destFolder
 
 
 
