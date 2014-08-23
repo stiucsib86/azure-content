@@ -111,7 +111,7 @@ For more information, see [HDInsight: Hive Internal and External Tables Intro][c
 
 		$subscriptionName = "<AzureSubscriptionName>"
 		$storageAccountName = "<AzureStorageAccountName>"
-		$ContainerName = "<BlobStorageContainerName>"
+		$dataContainerName = "<BlobStorageContainerName>"
 		
 		$localFolder = "C:\Tutorials\FlightDelays\Data"
 		$destFolder = "tutorials/flightdelays/data"
@@ -458,7 +458,7 @@ There is a known Hive path issue. The instructions for fixing the issue can be f
 		
 		Use-AzureHDInsightCluster $clusterName
 				
-		Invoke-Hive –File $hqlScriptFile
+		Invoke-Hive -File $hqlScriptFile
 
 4. Run the following command to verify the results:
 
